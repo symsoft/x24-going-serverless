@@ -1,6 +1,5 @@
 /*
  * Copyright Symsoft AB 1996-2015. All Rights Reserved.
- * Marcus
  */
 package se.symsoft.x24.goingserverless;
 
