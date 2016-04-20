@@ -28,7 +28,7 @@ public class Request {
     private Integer timeout;
     @SerializedName("trafficCase")
     @Expose
-    private Object trafficCase;
+    private Integer trafficCase;
 
     /**
      * No args constructor for use in serialization
@@ -46,7 +46,7 @@ public class Request {
      * @param trafficCase
      * @param timeout
      */
-    public Request(Boolean allowOnTimeout, String detectionPoint, Integer serviceKey, Submit submit, Integer timeout, Object trafficCase) {
+    public Request(Boolean allowOnTimeout, String detectionPoint, Integer serviceKey, Submit submit, Integer timeout, Integer trafficCase) {
         this.allowOnTimeout = allowOnTimeout;
         this.detectionPoint = detectionPoint;
         this.serviceKey = serviceKey;
@@ -159,7 +159,7 @@ public class Request {
      * @param trafficCase
      * The trafficCase
      */
-    public void setTrafficCase(Object trafficCase) {
+    public void setTrafficCase(Integer trafficCase) {
         this.trafficCase = trafficCase;
     }
 

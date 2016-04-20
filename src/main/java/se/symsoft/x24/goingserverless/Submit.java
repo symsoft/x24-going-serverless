@@ -31,34 +31,34 @@ public class Submit {
     private String destAddrValue;
     @SerializedName("destImsi")
     @Expose
-    private Object destImsi;
+    private String destImsi;
     @SerializedName("destMsc")
     @Expose
-    private Object destMsc;
+    private String destMsc;
     @SerializedName("destMsisdn")
     @Expose
     private String destMsisdn;
     @SerializedName("dialledDestAddrNP")
     @Expose
-    private Object dialledDestAddrNP;
+    private String dialledDestAddrNP;
     @SerializedName("dialledDestAddrTON")
     @Expose
-    private Object dialledDestAddrTON;
+    private String dialledDestAddrTON;
     @SerializedName("dialledDestAddrValue")
     @Expose
-    private Object dialledDestAddrValue;
+    private String dialledDestAddrValue;
     @SerializedName("earliestAttemptTimeStamp")
     @Expose
     private Integer earliestAttemptTimeStamp;
     @SerializedName("esmeIdentifier")
     @Expose
-    private Object esmeIdentifier;
+    private Integer esmeIdentifier;
     @SerializedName("esmeMessageId")
     @Expose
-    private Object esmeMessageId;
+    private String esmeMessageId;
     @SerializedName("mapVersion")
     @Expose
-    private Object mapVersion;
+    private String mapVersion;
     @SerializedName("messageReference")
     @Expose
     private Integer messageReference;
@@ -67,13 +67,13 @@ public class Submit {
     private String messagingMode;
     @SerializedName("modifiedOrigAddrNP")
     @Expose
-    private Object modifiedOrigAddrNP;
+    private String modifiedOrigAddrNP;
     @SerializedName("modifiedOrigAddrTON")
     @Expose
-    private Object modifiedOrigAddrTON;
+    private String modifiedOrigAddrTON;
     @SerializedName("modifiedOrigAddrValue")
     @Expose
-    private Object modifiedOrigAddrValue;
+    private String modifiedOrigAddrValue;
     @SerializedName("moreMessagesToSend")
     @Expose
     private Boolean moreMessagesToSend;
@@ -94,10 +94,10 @@ public class Submit {
     private String origAddrValue;
     @SerializedName("origImsi")
     @Expose
-    private Object origImsi;
+    private String origImsi;
     @SerializedName("origMsc")
     @Expose
-    private Object origMsc;
+    private String origMsc;
     @SerializedName("originalOrigAddrValue")
     @Expose
     private String originalOrigAddrValue;
@@ -115,7 +115,7 @@ public class Submit {
     private Boolean sequenceEnforced;
     @SerializedName("serviceCentreAddress")
     @Expose
-    private Object serviceCentreAddress;
+    private String serviceCentreAddress;
     @SerializedName("sourceEsmeType")
     @Expose
     private String sourceEsmeType;
@@ -133,7 +133,7 @@ public class Submit {
     private Integer statusReportRequest;
     @SerializedName("superRefId")
     @Expose
-    private Object superRefId;
+    private String superRefId;
     @SerializedName("suppressCdrGeneration")
     @Expose
     private Boolean suppressCdrGeneration;
@@ -222,7 +222,7 @@ public class Submit {
      * @param origAddrNP
      * @param origMsc
      */
-    public Submit(Boolean concat, Integer concatSmRefNumber, Integer concatSmTotal, String destAddrNP, String destAddrTON, String destAddrValue, Object destImsi, Object destMsc, String destMsisdn, Object dialledDestAddrNP, Object dialledDestAddrTON, Object dialledDestAddrValue, Integer earliestAttemptTimeStamp, Object esmeIdentifier, Object esmeMessageId, Object mapVersion, Integer messageReference, String messagingMode, Object modifiedOrigAddrNP, Object modifiedOrigAddrTON, Object modifiedOrigAddrValue, Boolean moreMessagesToSend, Integer noOfDeliveryAttempts, String origAddrNP, Boolean origAddrPresentationRestricted, String origAddrTON, String origAddrValue, Object origImsi, Object origMsc, String originalOrigAddrValue, Integer protocolIdentifier, String refId, Integer routingIndex, Boolean sequenceEnforced, Object serviceCentreAddress, String sourceEsmeType, String sourceName, String sourceType, String standardType, Integer statusReportRequest, Object superRefId, Boolean suppressCdrGeneration, String type, String unmodifiedOrigAddrNP, String unmodifiedOrigAddrTON, String unmodifiedOrigAddrValue, UserData userData, String userProvidedId, Integer validUntil, Integer virtualSmscId) {
+    public Submit(Boolean concat, Integer concatSmRefNumber, Integer concatSmTotal, String destAddrNP, String destAddrTON, String destAddrValue, String destImsi, String destMsc, String destMsisdn, String dialledDestAddrNP, String dialledDestAddrTON, String dialledDestAddrValue, Integer earliestAttemptTimeStamp, Integer esmeIdentifier, String esmeMessageId, String mapVersion, Integer messageReference, String messagingMode, String modifiedOrigAddrNP, String modifiedOrigAddrTON, String modifiedOrigAddrValue, Boolean moreMessagesToSend, Integer noOfDeliveryAttempts, String origAddrNP, Boolean origAddrPresentationRestricted, String origAddrTON, String origAddrValue, String origImsi, String origMsc, String originalOrigAddrValue, Integer protocolIdentifier, String refId, Integer routingIndex, Boolean sequenceEnforced, String serviceCentreAddress, String sourceEsmeType, String sourceName, String sourceType, String standardType, Integer statusReportRequest, String superRefId, Boolean suppressCdrGeneration, String type, String unmodifiedOrigAddrNP, String unmodifiedOrigAddrTON, String unmodifiedOrigAddrValue, UserData userData, String userProvidedId, Integer validUntil, Integer virtualSmscId) {
         this.concat = concat;
         this.concatSmRefNumber = concatSmRefNumber;
         this.concatSmTotal = concatSmTotal;
@@ -388,7 +388,7 @@ public class Submit {
      * @return
      * The destImsi
      */
-    public Object getDestImsi() {
+    public String getDestImsi() {
         return destImsi;
     }
 
@@ -397,7 +397,7 @@ public class Submit {
      * @param destImsi
      * The destImsi
      */
-    public void setDestImsi(Object destImsi) {
+    public void setDestImsi(String destImsi) {
         this.destImsi = destImsi;
     }
 
@@ -406,7 +406,7 @@ public class Submit {
      * @return
      * The destMsc
      */
-    public Object getDestMsc() {
+    public String getDestMsc() {
         return destMsc;
     }
 
@@ -415,7 +415,7 @@ public class Submit {
      * @param destMsc
      * The destMsc
      */
-    public void setDestMsc(Object destMsc) {
+    public void setDestMsc(String destMsc) {
         this.destMsc = destMsc;
     }
 
@@ -442,7 +442,7 @@ public class Submit {
      * @return
      * The dialledDestAddrNP
      */
-    public Object getDialledDestAddrNP() {
+    public String getDialledDestAddrNP() {
         return dialledDestAddrNP;
     }
 
@@ -451,7 +451,7 @@ public class Submit {
      * @param dialledDestAddrNP
      * The dialledDestAddrNP
      */
-    public void setDialledDestAddrNP(Object dialledDestAddrNP) {
+    public void setDialledDestAddrNP(String dialledDestAddrNP) {
         this.dialledDestAddrNP = dialledDestAddrNP;
     }
 
@@ -460,7 +460,7 @@ public class Submit {
      * @return
      * The dialledDestAddrTON
      */
-    public Object getDialledDestAddrTON() {
+    public String getDialledDestAddrTON() {
         return dialledDestAddrTON;
     }
 
@@ -469,7 +469,7 @@ public class Submit {
      * @param dialledDestAddrTON
      * The dialledDestAddrTON
      */
-    public void setDialledDestAddrTON(Object dialledDestAddrTON) {
+    public void setDialledDestAddrTON(String dialledDestAddrTON) {
         this.dialledDestAddrTON = dialledDestAddrTON;
     }
 
@@ -478,7 +478,7 @@ public class Submit {
      * @return
      * The dialledDestAddrValue
      */
-    public Object getDialledDestAddrValue() {
+    public String getDialledDestAddrValue() {
         return dialledDestAddrValue;
     }
 
@@ -487,7 +487,7 @@ public class Submit {
      * @param dialledDestAddrValue
      * The dialledDestAddrValue
      */
-    public void setDialledDestAddrValue(Object dialledDestAddrValue) {
+    public void setDialledDestAddrValue(String dialledDestAddrValue) {
         this.dialledDestAddrValue = dialledDestAddrValue;
     }
 
@@ -514,7 +514,7 @@ public class Submit {
      * @return
      * The esmeIdentifier
      */
-    public Object getEsmeIdentifier() {
+    public Integer getEsmeIdentifier() {
         return esmeIdentifier;
     }
 
@@ -523,7 +523,7 @@ public class Submit {
      * @param esmeIdentifier
      * The esmeIdentifier
      */
-    public void setEsmeIdentifier(Object esmeIdentifier) {
+    public void setEsmeIdentifier(Integer esmeIdentifier) {
         this.esmeIdentifier = esmeIdentifier;
     }
 
@@ -532,7 +532,7 @@ public class Submit {
      * @return
      * The esmeMessageId
      */
-    public Object getEsmeMessageId() {
+    public String getEsmeMessageId() {
         return esmeMessageId;
     }
 
@@ -541,7 +541,7 @@ public class Submit {
      * @param esmeMessageId
      * The esmeMessageId
      */
-    public void setEsmeMessageId(Object esmeMessageId) {
+    public void setEsmeMessageId(String esmeMessageId) {
         this.esmeMessageId = esmeMessageId;
     }
 
@@ -550,7 +550,7 @@ public class Submit {
      * @return
      * The mapVersion
      */
-    public Object getMapVersion() {
+    public String getMapVersion() {
         return mapVersion;
     }
 
@@ -559,7 +559,7 @@ public class Submit {
      * @param mapVersion
      * The mapVersion
      */
-    public void setMapVersion(Object mapVersion) {
+    public void setMapVersion(String mapVersion) {
         this.mapVersion = mapVersion;
     }
 
@@ -604,7 +604,7 @@ public class Submit {
      * @return
      * The modifiedOrigAddrNP
      */
-    public Object getModifiedOrigAddrNP() {
+    public String getModifiedOrigAddrNP() {
         return modifiedOrigAddrNP;
     }
 
@@ -613,7 +613,7 @@ public class Submit {
      * @param modifiedOrigAddrNP
      * The modifiedOrigAddrNP
      */
-    public void setModifiedOrigAddrNP(Object modifiedOrigAddrNP) {
+    public void setModifiedOrigAddrNP(String modifiedOrigAddrNP) {
         this.modifiedOrigAddrNP = modifiedOrigAddrNP;
     }
 
@@ -622,7 +622,7 @@ public class Submit {
      * @return
      * The modifiedOrigAddrTON
      */
-    public Object getModifiedOrigAddrTON() {
+    public String getModifiedOrigAddrTON() {
         return modifiedOrigAddrTON;
     }
 
@@ -631,7 +631,7 @@ public class Submit {
      * @param modifiedOrigAddrTON
      * The modifiedOrigAddrTON
      */
-    public void setModifiedOrigAddrTON(Object modifiedOrigAddrTON) {
+    public void setModifiedOrigAddrTON(String modifiedOrigAddrTON) {
         this.modifiedOrigAddrTON = modifiedOrigAddrTON;
     }
 
@@ -640,7 +640,7 @@ public class Submit {
      * @return
      * The modifiedOrigAddrValue
      */
-    public Object getModifiedOrigAddrValue() {
+    public String getModifiedOrigAddrValue() {
         return modifiedOrigAddrValue;
     }
 
@@ -649,7 +649,7 @@ public class Submit {
      * @param modifiedOrigAddrValue
      * The modifiedOrigAddrValue
      */
-    public void setModifiedOrigAddrValue(Object modifiedOrigAddrValue) {
+    public void setModifiedOrigAddrValue(String modifiedOrigAddrValue) {
         this.modifiedOrigAddrValue = modifiedOrigAddrValue;
     }
 
@@ -766,7 +766,7 @@ public class Submit {
      * @return
      * The origImsi
      */
-    public Object getOrigImsi() {
+    public String getOrigImsi() {
         return origImsi;
     }
 
@@ -775,7 +775,7 @@ public class Submit {
      * @param origImsi
      * The origImsi
      */
-    public void setOrigImsi(Object origImsi) {
+    public void setOrigImsi(String origImsi) {
         this.origImsi = origImsi;
     }
 
@@ -784,7 +784,7 @@ public class Submit {
      * @return
      * The origMsc
      */
-    public Object getOrigMsc() {
+    public String getOrigMsc() {
         return origMsc;
     }
 
@@ -793,7 +793,7 @@ public class Submit {
      * @param origMsc
      * The origMsc
      */
-    public void setOrigMsc(Object origMsc) {
+    public void setOrigMsc(String origMsc) {
         this.origMsc = origMsc;
     }
 
@@ -892,7 +892,7 @@ public class Submit {
      * @return
      * The serviceCentreAddress
      */
-    public Object getServiceCentreAddress() {
+    public String getServiceCentreAddress() {
         return serviceCentreAddress;
     }
 
@@ -901,7 +901,7 @@ public class Submit {
      * @param serviceCentreAddress
      * The serviceCentreAddress
      */
-    public void setServiceCentreAddress(Object serviceCentreAddress) {
+    public void setServiceCentreAddress(String serviceCentreAddress) {
         this.serviceCentreAddress = serviceCentreAddress;
     }
 
@@ -1000,7 +1000,7 @@ public class Submit {
      * @return
      * The superRefId
      */
-    public Object getSuperRefId() {
+    public String getSuperRefId() {
         return superRefId;
     }
 
@@ -1009,7 +1009,7 @@ public class Submit {
      * @param superRefId
      * The superRefId
      */
-    public void setSuperRefId(Object superRefId) {
+    public void setSuperRefId(String superRefId) {
         this.superRefId = superRefId;
     }
 
