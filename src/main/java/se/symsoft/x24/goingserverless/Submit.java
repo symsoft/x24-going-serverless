@@ -49,7 +49,7 @@ public class Submit {
     private String dialledDestAddrValue;
     @SerializedName("earliestAttemptTimeStamp")
     @Expose
-    private Integer earliestAttemptTimeStamp;
+    private String earliestAttemptTimeStamp;
     @SerializedName("esmeIdentifier")
     @Expose
     private Integer esmeIdentifier;
@@ -157,7 +157,7 @@ public class Submit {
     private String userProvidedId;
     @SerializedName("validUntil")
     @Expose
-    private Integer validUntil;
+    private String validUntil;
     @SerializedName("virtualSmscId")
     @Expose
     private Integer virtualSmscId;
@@ -170,59 +170,58 @@ public class Submit {
     }
 
     /**
-     *
-     * @param superRefId
-     * @param modifiedOrigAddrValue
-     * @param validUntil
-     * @param type
-     * @param destImsi
-     * @param origAddrPresentationRestricted
+     *  @param concat
+     * @param concatSmRefNumber
+     * @param concatSmTotal
      * @param destAddrNP
-     * @param modifiedOrigAddrNP
-     * @param routingIndex
-     * @param unmodifiedOrigAddrNP
-     * @param dialledDestAddrTON
+     * @param destAddrTON
+     * @param destAddrValue
+     * @param destImsi
+     * @param destMsc
      * @param destMsisdn
+     * @param dialledDestAddrNP
+     * @param dialledDestAddrTON
+     * @param dialledDestAddrValue
+     * @param earliestAttemptTimeStamp
+     * @param esmeIdentifier
      * @param esmeMessageId
-     * @param suppressCdrGeneration
-     * @param originalOrigAddrValue
+     * @param mapVersion
+     * @param messageReference
+     * @param messagingMode
+     * @param modifiedOrigAddrNP
+     * @param modifiedOrigAddrTON
+     * @param modifiedOrigAddrValue
      * @param moreMessagesToSend
+     * @param noOfDeliveryAttempts
+     * @param origAddrNP
+     * @param origAddrPresentationRestricted
      * @param origAddrTON
      * @param origAddrValue
-     * @param virtualSmscId
-     * @param dialledDestAddrNP
-     * @param esmeIdentifier
-     * @param concatSmRefNumber
-     * @param standardType
-     * @param serviceCentreAddress
-     * @param dialledDestAddrValue
-     * @param noOfDeliveryAttempts
-     * @param modifiedOrigAddrTON
      * @param origImsi
-     * @param messagingMode
-     * @param userProvidedId
-     * @param mapVersion
-     * @param refId
-     * @param sourceEsmeType
-     * @param userData
-     * @param statusReportRequest
-     * @param sourceName
-     * @param unmodifiedOrigAddrTON
-     * @param destAddrValue
-     * @param unmodifiedOrigAddrValue
-     * @param messageReference
-     * @param sourceType
-     * @param concatSmTotal
-     * @param destMsc
-     * @param destAddrTON
-     * @param earliestAttemptTimeStamp
-     * @param concat
-     * @param protocolIdentifier
-     * @param sequenceEnforced
-     * @param origAddrNP
      * @param origMsc
+     * @param originalOrigAddrValue
+     * @param protocolIdentifier
+     * @param refId
+     * @param routingIndex
+     * @param sequenceEnforced
+     * @param serviceCentreAddress
+     * @param sourceEsmeType
+     * @param sourceName
+     * @param sourceType
+     * @param standardType
+     * @param statusReportRequest
+     * @param superRefId
+     * @param suppressCdrGeneration
+     * @param type
+     * @param unmodifiedOrigAddrNP
+     * @param unmodifiedOrigAddrTON
+     * @param unmodifiedOrigAddrValue
+     * @param userData
+     * @param userProvidedId
+     * @param validUntil
+     * @param virtualSmscId
      */
-    public Submit(Boolean concat, Integer concatSmRefNumber, Integer concatSmTotal, String destAddrNP, String destAddrTON, String destAddrValue, String destImsi, String destMsc, String destMsisdn, String dialledDestAddrNP, String dialledDestAddrTON, String dialledDestAddrValue, Integer earliestAttemptTimeStamp, Integer esmeIdentifier, String esmeMessageId, String mapVersion, Integer messageReference, String messagingMode, String modifiedOrigAddrNP, String modifiedOrigAddrTON, String modifiedOrigAddrValue, Boolean moreMessagesToSend, Integer noOfDeliveryAttempts, String origAddrNP, Boolean origAddrPresentationRestricted, String origAddrTON, String origAddrValue, String origImsi, String origMsc, String originalOrigAddrValue, Integer protocolIdentifier, String refId, Integer routingIndex, Boolean sequenceEnforced, String serviceCentreAddress, String sourceEsmeType, String sourceName, String sourceType, String standardType, Integer statusReportRequest, String superRefId, Boolean suppressCdrGeneration, String type, String unmodifiedOrigAddrNP, String unmodifiedOrigAddrTON, String unmodifiedOrigAddrValue, UserData userData, String userProvidedId, Integer validUntil, Integer virtualSmscId) {
+    public Submit(Boolean concat, Integer concatSmRefNumber, Integer concatSmTotal, String destAddrNP, String destAddrTON, String destAddrValue, String destImsi, String destMsc, String destMsisdn, String dialledDestAddrNP, String dialledDestAddrTON, String dialledDestAddrValue, String earliestAttemptTimeStamp, Integer esmeIdentifier, String esmeMessageId, String mapVersion, Integer messageReference, String messagingMode, String modifiedOrigAddrNP, String modifiedOrigAddrTON, String modifiedOrigAddrValue, Boolean moreMessagesToSend, Integer noOfDeliveryAttempts, String origAddrNP, Boolean origAddrPresentationRestricted, String origAddrTON, String origAddrValue, String origImsi, String origMsc, String originalOrigAddrValue, Integer protocolIdentifier, String refId, Integer routingIndex, Boolean sequenceEnforced, String serviceCentreAddress, String sourceEsmeType, String sourceName, String sourceType, String standardType, Integer statusReportRequest, String superRefId, Boolean suppressCdrGeneration, String type, String unmodifiedOrigAddrNP, String unmodifiedOrigAddrTON, String unmodifiedOrigAddrValue, UserData userData, String userProvidedId, String validUntil, Integer virtualSmscId) {
         this.concat = concat;
         this.concatSmRefNumber = concatSmRefNumber;
         this.concatSmTotal = concatSmTotal;
@@ -496,7 +495,7 @@ public class Submit {
      * @return
      * The earliestAttemptTimeStamp
      */
-    public Integer getEarliestAttemptTimeStamp() {
+    public String getEarliestAttemptTimeStamp() {
         return earliestAttemptTimeStamp;
     }
 
@@ -505,7 +504,7 @@ public class Submit {
      * @param earliestAttemptTimeStamp
      * The earliestAttemptTimeStamp
      */
-    public void setEarliestAttemptTimeStamp(Integer earliestAttemptTimeStamp) {
+    public void setEarliestAttemptTimeStamp(String earliestAttemptTimeStamp) {
         this.earliestAttemptTimeStamp = earliestAttemptTimeStamp;
     }
 
@@ -1144,7 +1143,7 @@ public class Submit {
      * @return
      * The validUntil
      */
-    public Integer getValidUntil() {
+    public String getValidUntil() {
         return validUntil;
     }
 
@@ -1153,7 +1152,7 @@ public class Submit {
      * @param validUntil
      * The validUntil
      */
-    public void setValidUntil(Integer validUntil) {
+    public void setValidUntil(String validUntil) {
         this.validUntil = validUntil;
     }
 
